@@ -1,0 +1,352 @@
+html, body {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1B1A1A;
+}
+@media (max-width: 800px) {
+    body {
+        height: 100%;
+        overflow: visible;
+    }
+}
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-size: 100px;
+    border-left: 2px solid black;
+}
+@media (max-width: 800px) {
+    .slide {
+        width: 100%;
+        height: 100%;
+        display:block;
+    }
+}
+h1 {
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+h3 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+button {
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #C24242;
+    padding: 10px;
+}
+button:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+hr {
+    height: 1px;
+    color: #F1F1F1;
+    background-color: #F1F1F1;
+    border: none;
+    width: 1000px;
+}
+
+.scrollHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+@media (max-width: 800px) {
+    .scrollHorizontal {
+        width: 100%;
+        display:block;
+        transform: rotate(-90deg) translateY(100vh);
+    }
+}
+.container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+    -ms-overlow-style: none;
+}
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        transform: rotate(90deg) translateX(100vh);
+        overflow: visible;
+    }
+
+}
+
+::-webkit-scrollbar {
+    height: 4px ;
+    width: 4px ;
+    background-color: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-track {
+    margin-left: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #C24242 ;
+}
+.elemGraph {
+    position: relative;
+    top: 5px;
+    left: 200px;
+    z-index: 0;
+}
+#accueil h1 {
+    position: relative;
+    top: -450px;
+    left: 400px;
+    z-index: 1;
+    margin-left: 0;
+}
+#accueil h3 {
+    position: relative;
+    top: -370px;
+    left: 400px;
+    z-index: 1;
+}
+.contenuTexte {
+    display: block;
+    width: 700px;
+    margin-left: 60px;
+}
+.blocsProjets {
+    overflow-x: scroll;
+    margin-top: 115px;
+    margin-left: 100px;
+    height: 550px;
+    -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.expand_down {
+    position: fixed;
+    display: block;
+    margin-left: 283px;
+    margin-top: 500px;
+    opacity: 1;
+
+}
+.projet {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0;
+    width: 600px;
+    height: 300px;
+}
+.projet .description {
+    border: 1px solid #F1F1F1;
+}
+.projet .description .textes {
+    text-align: center;
+    padding: 40px;
+}
+.blocsProjets .img {
+    background-color: transparent;
+    border: 1px solid #F1F1F1;
+}
+.blocsProjets .description {
+    background-color: #F1F1F1;
+}
+.blocsProjets::-webkit-scrollbar {
+    height: 5px ;
+    width: 5px ;
+    background-color: rgba(0,0,0,0.1);
+    scroll-padding-left: 50px;
+}
+.blocsProjets::-webkit-scrollbar-track {
+    padding-left: 50px;
+}
+.blocsProjets::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,1) ;
+}
+.blocsProjets::-webkit-scrollbar-corner {
+display: none;
+}
+#Apropos .contenuTexte{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+}
+.proposGauche {
+    width: 800px;
+}
+.proposDroite {
+    width: 500px;
+    margin-top: 200px;
+}
+.proposDroite .competences h3, .proposDroite .competences p {
+    margin-left:0;
+}
+#Apropos .cercle {
+    background-color: #AFAFAF;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+}
+#Apropos .barreComp {
+    background-color: rgba(0,0,0,0.2);
+    width: 400px;
+    height: 20px;
+}
+#Apropos .barreCompColor {
+    background-color: #C24242;
+    height: 20px;
+    animation: animComp 5s;
+}
+@keyframes animComp {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+#Apropos .one {
+    width: 30%;
+}
+#Apropos .two {
+    width: 260px;
+}
+#Apropos .three {
+    width: 250px;
+}
+#Apropos .cercleParcours {
+    background-color: #C24242;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+}
+.texteParcours {
+    position: relative;
+    top: -45px;
+    margin-left: 9px;
+    padding-left: 30px;
+}
+.trait {
+    position: absolute;
+    margin-left: 8px;
+    width: 4px;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) );
+
+}
+#Apropos .titreParcours {
+    width: 500px;
+    display: flex;
+}
+.contenuTexte p {
+    width: 600px;
+}
+#contact input, #contact textarea {
+    border: 1px solid #C24242;
+    background-color: transparent;
+}
+#contact textarea {
+    width: 800px;
+    height: 120px;
+}
+.radio {
+    margin-top: -60px;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px;
+    margin-right: 20px;
+}
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    content:'';
+    border-radius: 50%;
+}
+input[type="radio"] + label::before {
+    bottom: 0;
+    left: 0;
+    border: 1px solid #C24242;
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+}
+input[type="radio"] + label::after {
+    bottom: 5.5px;
+    left: 5.5px;
+    width: 7px;
+    height: 7px;
+}
+input[type="radio"]:checked + label::after {
+    background-color: #C24242;
+}
+#contact .champsSaisie input {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 30px;
+}
+#contact .champsSaisie input, #contact textarea {
+    padding: 10px;
+}
+#contact button {
+    position: relative ;
+    top: -70px;
+}
+#contact .elemGraph {
+    position: relative;
+    left: 0;
+    top: -350px;
+}
+.cursor {
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 6px;
+    height: 6px;
+    background: #AFAFAF;
+    border-radius: 50%;
+}
+
+.expand {
+    animation: Anim1 .5s;
+    background: #AFAFAF;
+}
+
+@keyframes Anim1 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+        opacity:0;
+    }
+}

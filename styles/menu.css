@@ -1,0 +1,98 @@
+.iconMenu {
+    padding-bottom: 500px;
+}
+.menu  {
+    background-color: #1B1A1A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-100vw);
+    transition: all 1s;
+    z-index: 2;
+    opacity: 0;
+}
+.menu li{
+    margin-bottom: 60px;
+    border-bottom: 1px solid #AFAFAF;
+    width: 70%;
+    transform: translateX(50px);
+    transition: all 4s ease;
+}
+.menuOuvert .menu li {
+    transform: translateX(0);
+    opacity: 1;
+}
+.menuOuvert .menu {
+    opacity: 1;
+}
+.menuOuvert .menu li:nth-child(n+1) {
+    transition-delay: .5s;
+}
+.menuOuvert .menu li:nth-child(n+2) {
+    transition-delay: .7s;
+}
+.menuOuvert .menu li:nth-child(n+3) {
+    transition-delay: .9s;
+}
+.menuOuvert .menu li:nth-child(n+4) {
+    transition-delay: 1.1s;
+}
+.menu li:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.menu li:hover:after {
+    width: 100%;
+    background: #AFAFAF;
+}
+.menu li, .menu h1 {
+    margin-left: 200px;
+}
+.menuOuvert .menu {
+    transform: translateX(0);
+}
+.menuOuvert, .menuOuvert body {
+    overflow: hidden;
+}
+#accueil {
+    display: block;
+}
+#accueil h3, #accueil h1 {
+    bottom: 20px;
+}
+.blocMenu {
+    position:fixed;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 2;
+}
+.menuVertical {
+    background-color: #1B1A1A;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-left: 30px;
+}
+.menuHorizontal  {
+    position:fixed;
+    display: flex;
+
+    top: 690px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menuHorizontal li {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menuHorizontal ul {
+    padding-left: 0;
+    text-align: center;
+}

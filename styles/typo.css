@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Misto";
+    src: url("/typo/Misto.ttf") format("truetype");
+}
+.menu li a{
+    font-size: 40px;
+    font-weight: normal;
+}
+#accueil h1 {
+    font-family: "Misto", serif;
+    color: #C24242;
+    font-size: 120px;
+}
+h1 {
+    font-family: "Misto", serif;
+    color: #C24242;
+    font-size: 72px;
+}
+h2 {
+    font-family: "Montserrat Medium", sans-serif;
+    color: #F1F1F1;
+    font-size: 25px;
+}
+h3  {
+    font-family: "Montserrat", sans-serif;
+    color: #F1F1F1;
+    font-weight: lighter;
+    font-size: 20px;
+}
+h4 {
+    font-family: "Montserrat", sans-serif;
+    color: #F1F1F1;
+    font-weight: normal;
+    font-size: 17px;
+}
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #F1F1F1;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #F1F1F1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+}
+.menuHorizontal li {
+    font-size: 15px;
+}
+a:hover {
+    color: #AFAFAF;
+}
+#positionFixe a {
+    font-size: 15px;
+}
+li {
+    font-size: 18px;
+}
+.projet .description h3, .projet .description p {
+    color: #1B1A1A;
+}
+#contact label {
+    color: #F1F1F1;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+}
+#contact input, #contact textarea {
+    color: #AFAFAF;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+}
+button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #F1F1F1;
+}

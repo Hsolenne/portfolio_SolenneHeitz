@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    overflow: visible;
+}
+.contenu {
+    width: 600px;
+    margin: 40px 0 20px 200px;
+}
+.menu {
+    display: none;
+}
+.contenu h1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
