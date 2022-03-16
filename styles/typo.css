@@ -11,6 +11,11 @@
     color: #C24242;
     font-size: 120px;
 }
+@media (max-width: 800px) {
+    #accueil h1 {
+        font-size: 80px;
+    }
+}
 h1 {
     font-family: "Misto", serif;
     color: #C24242;
@@ -26,6 +31,14 @@ h3  {
     color: #F1F1F1;
     font-weight: lighter;
     font-size: 20px;
+}
+.description h3 {
+    color: #1B1A1A;
+    font-family: "Montserrat SemiBold",sans-serif;
+}
+.description p {
+    color: #1B1A1A;
+    font-weight: normal;
 }
 h4 {
     font-family: "Montserrat", sans-serif;

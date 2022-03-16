@@ -1,5 +1,32 @@
+.iconMenu, .iconMenu::before, .iconMenu::after {
+    content: "";
+    position: absolute;
+    background-color: #C24242;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    transition: all .4s ease-in-out;
+}
 .iconMenu {
-    padding-bottom: 500px;
+    left: 53px;
+    top: 90px;
+}
+.iconMenu::before {
+    top: -8px;
+}
+.iconMenu::after {
+    top: 8px;
+}
+.menuOuvert .iconMenu {
+    transform: rotate(135deg);
+}
+.menuOuvert .iconMenu::after, .menuOuvert .iconMenu::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.menuFerme .menu {
+    opacity: 0;
 }
 .menu  {
     background-color: #1B1A1A;
@@ -60,12 +87,7 @@
 .menuOuvert, .menuOuvert body {
     overflow: hidden;
 }
-#accueil {
-    display: block;
-}
-#accueil h3, #accueil h1 {
-    bottom: 20px;
-}
+
 .blocMenu {
     position:fixed;
     display: flex;
@@ -76,7 +98,7 @@
 .menuVertical {
     background-color: #1B1A1A;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 500px 20px 20px 20px;
     margin-left: 30px;
 }
 .menuHorizontal  {
@@ -95,4 +117,9 @@
 .menuHorizontal ul {
     padding-left: 0;
     text-align: center;
+}
+.menuProjet .retour {
+    position: relative;
+    top: -480px;
+    left: 8px;
 }

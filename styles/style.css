@@ -12,7 +12,7 @@ body {
 @media (max-width: 800px) {
     body {
         height: 100%;
-        overflow: visible;
+        overflow-y: visible;
     }
 }
 .slide {
@@ -20,13 +20,25 @@ body {
     height: 100vh;
     display: flex;
     font-size: 100px;
-    border-left: 2px solid black;
+    border-left: 2px solid #1B1A1A;
 }
 @media (max-width: 800px) {
     .slide {
-        width: 100%;
-        height: 100%;
         display:block;
+    }
+}
+#accueil {
+    display: block;
+}
+#accueil h3, #accueil h1 {
+    bottom: 20px;
+}
+@media (max-width: 800px) {
+    #accueil {
+        width: 50%;
+        height: 20%;
+
+
     }
 }
 h1 {
@@ -83,7 +95,6 @@ hr {
         transform: rotate(90deg) translateX(100vh);
         overflow: visible;
     }
-
 }
 
 ::-webkit-scrollbar {
@@ -102,6 +113,18 @@ hr {
     top: 5px;
     left: 200px;
     z-index: 0;
+}
+@media (max-width: 800px) {
+    .container {
+        position: relative;
+        top: -1500px;
+    }
+    #accueil .elemGraph {
+        left: -80px;
+    }
+    #accueil h3 {
+        left: 20px;
+    }
 }
 #accueil h1 {
     position: relative;
@@ -124,24 +147,30 @@ hr {
 .blocsProjets {
     overflow-x: scroll;
     margin-top: 115px;
-    margin-left: 100px;
+    margin-left: 50px;
     height: 550px;
     -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 .expand_down {
     position: fixed;
     display: block;
-    margin-left: 283px;
+    margin-left: 310px;
     margin-top: 500px;
     opacity: 1;
-
+    z-index: 10;
 }
 .projet {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 0;
-    width: 600px;
+    width: 650px;
     height: 300px;
+}
+.projet img {
+    transition: all 1s ease;
+}
+.projet img:hover {
+    transform: scale(1.25);
 }
 .projet .description {
     border: 1px solid #F1F1F1;
@@ -172,26 +201,23 @@ hr {
 .blocsProjets::-webkit-scrollbar-corner {
 display: none;
 }
+#Apropos, #projets {
+    margin-left: 180px;
+}
 #Apropos .contenuTexte{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 50px;
+    grid-gap: 30px;
 }
 .proposGauche {
     width: 800px;
 }
 .proposDroite {
-    width: 500px;
+    width: 400px;
     margin-top: 200px;
 }
 .proposDroite .competences h3, .proposDroite .competences p {
     margin-left:0;
-}
-#Apropos .cercle {
-    background-color: #AFAFAF;
-    border-radius: 50px;
-    width: 60px;
-    height: 60px;
 }
 #Apropos .barreComp {
     background-color: rgba(0,0,0,0.2);
@@ -201,24 +227,48 @@ display: none;
 #Apropos .barreCompColor {
     background-color: #C24242;
     height: 20px;
-    animation: animComp 5s;
 }
-@keyframes animComp {
+#Apropos .one {
+    width: 90%;
+    animation: animCompOne 5s;
+}
+#Apropos .parcours {
+    margin-top: 80px;
+}
+#Apropos .competences {
+    margin-top: 100px;
+}
+@keyframes animCompOne {
     from {
         width: 0;
     }
     to {
-        width: 100%;
+        width: 90%;
     }
 }
-#Apropos .one {
-    width: 30%;
-}
 #Apropos .two {
-    width: 260px;
+    width: 70%;
+    animation: animCompTwo 5s;
+}
+@keyframes animCompTwo {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
 }
 #Apropos .three {
-    width: 250px;
+    width: 80%;
+    animation: animCompThree 5s;
+}
+@keyframes animCompThree {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
 }
 #Apropos .cercleParcours {
     background-color: #C24242;
@@ -235,9 +285,9 @@ display: none;
 }
 .trait {
     position: absolute;
-    margin-left: 8px;
-    width: 4px;
-    height: 120px;
+    margin-left: 9px;
+    width: 2.5px;
+    height: 110px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) );
 
 }
@@ -314,7 +364,6 @@ input[type="radio"]:checked + label::after {
 .cursor {
     padding-right: 30px;
     padding-bottom: 30px;
-
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
@@ -331,6 +380,12 @@ input[type="radio"]:checked + label::after {
     height: 6px;
     background: #AFAFAF;
     border-radius: 50%;
+}
+@media (max-width: 500px) {
+    .cursor::before {
+        display: none;
+    }
+
 }
 
 .expand {
